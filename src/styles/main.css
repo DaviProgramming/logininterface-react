@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
+:root {
+
+    --primary-color: rgb(255, 0, 195);
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.721), rgba(0, 0, 0, 0.063)), url(https://i.pinimg.com/originals/0c/fd/74/0cfd744b2ef587ddb7aca744cbb3069d.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.container {
+
+    background-size: cover;
+    margin-top: 10vh;
+    width: 30vw;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 120px rgb(20, 20, 20), 0px 3px 1px rgb(255, 0, 0);
+}
+
+.choiceSing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 3vw;
+}
+
+.text-choice {
+    text-transform: uppercase;
+    color: brown;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.text-choice.actived {
+    color: var(--font-color);
+    border-bottom: 2px inset red;
+
+}
+
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+
+}
+
+.form-control small {
+    margin-top: 20px;
+    color: red;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    border-bottom: 3px solid red;
+    border-radius: 0px;
+}
+
+input::placeholder {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.form-control~button {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: red;
+    border: none;
+    padding: 1vw 5vw;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.button:hover {
+    background-color: red !important;
+
+}
+
+.button:active {
+    animation: moveButton 0.1s ease-in-out;
+}
+
+@keyframes moveButton {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+
+}
+
+.checkbox-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.checkbox-input input {
+    width: 10%;
+    background-color: red;
+    color: red;
+    margin-right: 10px;
+}
+
+
+
+small {
+    color: white;
+    font-weight: 600;
+}
+
+a small {
+    display: block;
+}
+
+
+@media screen and (max-width: 1280px) {
+    .container {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 998px) {
+    .container {
+        width: 70vw;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    input::placeholder {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .choiceSing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    input::placeholder {
+        text-align: center;
+    }
+}
